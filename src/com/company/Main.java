@@ -3,19 +3,12 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        MyHashTable<Integer, String> ht1 = new MyHashTable<>();
-        MyHashTable<Integer, String> ht2 = new MyHashTable<>();
-
-        ht1.put(1, "one");
-        ht1.put(2, "two");
-        ht1.put(3, "three");
-
-        ht2.put(4, "four");
-        ht2.put(5, "five");
-        ht2.put(6, "six");
-        System.out.println(ht1.getKey("two"));
-        System.out.println("Mappings of ht1 : " + ht1);
-        System.out.println("Mappings of ht2 : " + ht2);
+        WeightedGraph<String> graph = new WeightedGraph<>(false);
+        graph.addEdge("Almaty", "Astana", 2.1);
+        graph.addEdge("Almaty", "Shymkent", 7.2);
+        graph.addEdge("Shymkent", "Astana", 3.9);
+        graph.addEdge("Astana", "Kostanay", 3.5);
+        graph.addEdge("Shymkent", "Kyzylorda", 5.4);
 
     }
 }

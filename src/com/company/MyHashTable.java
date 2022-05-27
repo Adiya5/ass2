@@ -62,6 +62,7 @@ public class MyHashTable<K, V> {
     }
 
     public V remove(K key) {
+        int index = hash(key);
         HashNode<K, V> temp = chainArray[hash(key)];
         if (temp.key == key) {
             chainArray[hash(key)] = temp.next;
